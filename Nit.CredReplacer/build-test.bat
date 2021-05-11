@@ -1,0 +1,1 @@
+%PY27-32PATH%\Scripts\pyinstaller --onefile --console NIT.CredReplacer.py

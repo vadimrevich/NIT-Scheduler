@@ -1,0 +1,40 @@
+@echo off
+rem
+rem Командный файл инсталляции дистрибутива с файлами регистрации планировщика заданий
+rem
+
+rem Запускать файл с правами администратора
+
+setlocal enableextensions enabledelayedexpansion
+
+Rem Установка системнмных переменных окружения
+
+rem set Key=HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
+set Dest_DIR=c:\pub1
+set Key=HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+
+echo -
+echo Welcome to Reverse Schedule Installer!!
+echo This program install the packet into directory %Dest_DIR%
+echo -
+
+rem Write Config Files 
+rem @echo on
+echo "=== Changing Exponente Config ==="
+echo -
+
+echo Schedule Task..
+echo -
+
+%SystemRoot%\System32\schtasks.exe /Create /XML %Dest_DIR%\Util\Task_Kwint.xml /TN "Task Quinter Schedule" /F /RU MSSQLSR /RP Password01234
+%SystemRoot%\System32\schtasks.exe /Create /XML %Dest_DIR%\Util\Task_Quart.xml /TN "Task Quarter Schedule" /F /RU MSSQLSR /RP Password01234
+%SystemRoot%\System32\schtasks.exe /Create /XML %Dest_DIR%\Util\Task_Half.xml /TN "Task Half Schedule" /F /RU MSSQLSR /RP Password01234
+%SystemRoot%\System32\schtasks.exe /Create /XML %Dest_DIR%\Util\Task_Hourly.xml /TN "Task Hourly Schedule" /F /RU MSSQLSR /RP Password01234
+%SystemRoot%\System32\schtasks.exe /Create /XML %Dest_DIR%\Util\Task_Daily.xml /TN "Task Daily Schedule" /F /RU MSSQLSR /RP Password01234
+%SystemRoot%\System32\schtasks.exe /Create /XML %Dest_DIR%\Util\Task_Weekly.xml /TN "Task Weekly Schedule" /F /RU MSSQLSR /RP Password01234
+%SystemRoot%\System32\schtasks.exe /Create /XML %Dest_DIR%\Util\Task_Mounthly.xml /TN "Task Mounthly Schedule" /F /RU MSSQLSR /RP Password01234
+%SystemRoot%\System32\schtasks.exe /Create /XML %Dest_DIR%\Util\Task_Write.xml /TN "Task Write Schedule" /F /RU MSSQLSR /RP Password01234
+%SystemRoot%\System32\reg.exe Add "!Key!" /v "Task_RunOnce.bat" /t REG_SZ /d "C:\Windows\System32\cmd.exe /c C:\pub1\Util\Task_RunOnce.bat" /f
+
+echo Installation is made with Success!
+rem

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="A82587D1-F175-46E7-BA5C-3E00A44690D4" Name="NIT-Scheduler" Language="1033" Version="0.0.0.2" Manufacturer="New Internet Technologies Inc." UpgradeCode="FDD9984D-7B5E-4D2D-B6CC-439EF418ABA9">
+        <Package Description="Test file in a Product" Comments="Simple test" InstallerVersion="200" Compressed="yes" />
+        <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
+        <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="INSTALLFOLDER" Name="pub1">
+                <Directory Id="UTIL" Name="Util">
+                    <Component Id="REGISTER_SCHEDULE_REVERSE.BA_" DiskId="1" Guid="5F34BD04-E4E5-47BC-9BAC-78DE7B04A1A2">
+                        <File Id="REGISTER_SCHEDULE_REVERSE.BA_" Name="Register_Schedule_Reverse.ba_" Source="pub1\Util\Register_Schedule_Reverse.ba_" />
+                    </Component>
+                    <Component Id="SETTINGS_REVERSE.INI" DiskId="1" Guid="7A6BAAFF-E793-4A4A-B3A9-65A2E4C4501D">
+                        <File Id="SETTINGS_REVERSE.INI" Name="settings-reverse.ini" Source="pub1\Util\settings-reverse.ini" />
+                    </Component>
+                    <Component Id="TASK_DAILY.BAT" DiskId="1" Guid="309BF101-2A4D-4455-8492-A2E52D44D8EC">
+                        <File Id="TASK_DAILY.BAT" Name="Task_Daily.bat" Source="pub1\Util\Task_Daily.bat" />
+                    </Component>
+                    <Component Id="TASK_DAILY.XM_" DiskId="1" Guid="DA0A3F4C-A6E4-4520-94F1-E71E111DCACB">
+                        <File Id="TASK_DAILY.XM_" Name="Task_Daily.xm_" Source="pub1\Util\Task_Daily.xm_" />
+                    </Component>
+                    <Component Id="TASK_HALF.BAT" DiskId="1" Guid="8BC466DF-D6D2-4162-9C24-43E1E9A5651C">
+                        <File Id="TASK_HALF.BAT" Name="Task_Half.bat" Source="pub1\Util\Task_Half.bat" />
+                    </Component>
+                    <Component Id="TASK_HALF.XM_" DiskId="1" Guid="9154A14A-2C26-4A41-9ABF-4504D6C0D9C5">
+                        <File Id="TASK_HALF.XM_" Name="Task_Half.xm_" Source="pub1\Util\Task_Half.xm_" />
+                    </Component>
+                    <Component Id="TASK_HOURLY.BAT" DiskId="1" Guid="11741D79-7D4B-4F25-A420-688FAFDFCC64">
+                        <File Id="TASK_HOURLY.BAT" Name="Task_Hourly.bat" Source="pub1\Util\Task_Hourly.bat" />
+                    </Component>
+                    <Component Id="TASK_HOURLY.XM_" DiskId="1" Guid="5235EF9E-75ED-4CCD-A601-5E5269F6496C">
+                        <File Id="TASK_HOURLY.XM_" Name="Task_Hourly.xm_" Source="pub1\Util\Task_Hourly.xm_" />
+                    </Component>
+                    <Component Id="TASK_KWINT.BAT" DiskId="1" Guid="6062C2B9-8EFE-4738-BC64-F2FFA54D9DBA">
+                        <File Id="TASK_KWINT.BAT" Name="Task_Kwint.bat" Source="pub1\Util\Task_Kwint.bat" />
+                    </Component>
+                    <Component Id="TASK_KWINT.XM_" DiskId="1" Guid="4475C19D-E5D7-43D4-88DD-3A2283B3CF1E">
+                        <File Id="TASK_KWINT.XM_" Name="Task_Kwint.xm_" Source="pub1\Util\Task_Kwint.xm_" />
+                    </Component>
+                    <Component Id="TASK_MOUNTHLY.BAT" DiskId="1" Guid="BB7CD0CC-D978-4E70-B8C6-1EAA7B68766D">
+                        <File Id="TASK_MOUNTHLY.BAT" Name="Task_Mounthly.bat" Source="pub1\Util\Task_Mounthly.bat" />
+                    </Component>
+                    <Component Id="TASK_MOUNTHLY.XM_" DiskId="1" Guid="C94EBE38-10CB-4117-826C-35C32D1F43A1">
+                        <File Id="TASK_MOUNTHLY.XM_" Name="Task_Mounthly.xm_" Source="pub1\Util\Task_Mounthly.xm_" />
+                    </Component>
+                    <Component Id="TASK_QUART.BAT" DiskId="1" Guid="1B625A3F-8895-49B0-B1AD-69109E3E5665">
+                        <File Id="TASK_QUART.BAT" Name="Task_Quart.bat" Source="pub1\Util\Task_Quart.bat" />
+                    </Component>
+                    <Component Id="TASK_QUART.XM_" DiskId="1" Guid="85384F2C-8F71-4DCE-AAA3-A4248D81544B">
+                        <File Id="TASK_QUART.XM_" Name="Task_Quart.xm_" Source="pub1\Util\Task_Quart.xm_" />
+                    </Component>
+                    <Component Id="TASK_RUNONCE.BAT" DiskId="1" Guid="211FB218-0472-48A3-B0C5-586E7FF51EB3">
+                        <File Id="TASK_RUNONCE.BAT" Name="Task_RunOnce.bat" Source="pub1\Util\Task_RunOnce.bat" />
+                    </Component>
+                    <Component Id="TASK_WEEKLY.BAT" DiskId="1" Guid="24391F20-46BE-403E-8804-CEFAF8FF47C4">
+                        <File Id="TASK_WEEKLY.BAT" Name="Task_Weekly.bat" Source="pub1\Util\Task_Weekly.bat" />
+                    </Component>
+                    <Component Id="TASK_WEEKLY.XM_" DiskId="1" Guid="7285D908-040C-484F-AB08-C91BB0E9A27A">
+                        <File Id="TASK_WEEKLY.XM_" Name="Task_Weekly.xm_" Source="pub1\Util\Task_Weekly.xm_" />
+                    </Component>
+                    <Component Id="TASK_WRITE.BAT" DiskId="1" Guid="F11D0269-668D-47CB-867E-340EC86A37EF">
+                        <File Id="TASK_WRITE.BAT" Name="Task_Write.bat" Source="pub1\Util\Task_Write.bat" />
+                    </Component>
+                    <Component Id="TASK_WRITE.XM_" DiskId="1" Guid="FBE45719-BB00-4C52-B0CE-F9EA9E3FE4E8">
+                        <File Id="TASK_WRITE.XM_" Name="Task_Write.xm_" Source="pub1\Util\Task_Write.xm_" />
+                    </Component>
+                    <Component Id="NIT.CredReplacer.exe" Guid="DF3EA1BA-6E66-4545-8080-DD958250BA9F" DiskId="1">
+                        <File Id="NIT.CredReplacer.exe" Name="NIT.CredReplacer.exe" Source="Nit.CredReplacer\dist\NIT.CredReplacer.exe" />
+                    </Component>
+                    <Component Id="Register_Schedule_Reverse.Installer.bat" Guid="A874F7AB-192C-49D5-A81D-2E7EEF6C6E68" DiskId="1">
+                        <File Id="Register_Schedule_Reverse.Installer.bat" Name="Register_Schedule_Reverse.Installer.bat" Source="pub1\Util\Register_Schedule_Reverse.Installer.bat" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+        <UI />
+        <UIRef Id="WixUI_InstallDir" />
+        <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+        <Property Id="ROOTDRIVE" Value="C:\" />
+        <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
+            <ComponentRef Id="REGISTER_SCHEDULE_REVERSE.BA_" />
+            <ComponentRef Id="SETTINGS_REVERSE.INI" />
+            <ComponentRef Id="TASK_DAILY.BAT" />
+            <ComponentRef Id="TASK_DAILY.XM_" />
+            <ComponentRef Id="TASK_HALF.BAT" />
+            <ComponentRef Id="TASK_HALF.XM_" />
+            <ComponentRef Id="TASK_HOURLY.BAT" />
+            <ComponentRef Id="TASK_HOURLY.XM_" />
+            <ComponentRef Id="TASK_KWINT.BAT" />
+            <ComponentRef Id="TASK_KWINT.XM_" />
+            <ComponentRef Id="TASK_MOUNTHLY.BAT" />
+            <ComponentRef Id="TASK_MOUNTHLY.XM_" />
+            <ComponentRef Id="TASK_QUART.BAT" />
+            <ComponentRef Id="TASK_QUART.XM_" />
+            <ComponentRef Id="TASK_RUNONCE.BAT" />
+            <ComponentRef Id="TASK_WEEKLY.BAT" />
+            <ComponentRef Id="TASK_WEEKLY.XM_" />
+            <ComponentRef Id="TASK_WRITE.BAT" />
+            <ComponentRef Id="TASK_WRITE.XM_" />
+            <ComponentRef Id="NIT.CredReplacer.exe" />
+            <ComponentRef Id="Register_Schedule_Reverse.Installer.bat" />
+        </Feature>
+        <UI />
+        <InstallExecuteSequence>
+            <Custom Action="PostInstallation" Before="InstallFinalize" />
+        </InstallExecuteSequence>
+        <Binary Id="PostInstallation.vbs" SourceFile="Scripts\PostInstallation.vbs" />
+        <CustomAction Id="PostInstallation" BinaryKey="PostInstallation.vbs" VBScriptCall="" HideTarget="no" Impersonate="no" Return="check" Execute="deferred" />
+        <SetDirectory Id="INSTALLFOLDER" Value="[WindowsVolume]pub1" />
+    </Product>
+</Wix>
