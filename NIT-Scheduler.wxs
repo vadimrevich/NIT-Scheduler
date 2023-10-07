@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-    <Product Id="A82587D1-F175-46E7-BA5C-3E00A44690D4" Name="NIT-Scheduler" Language="1033" Version="0.0.0.2" Manufacturer="New Internet Technologies Inc." UpgradeCode="FDD9984D-7B5E-4D2D-B6CC-439EF418ABA9">
+    <Product Id="A82587D1-F175-46E7-BA5C-3E00A44690D4" Name="NIT-Scheduler" Language="1033" Version="0.1.0.0" Manufacturer="New Internet Technologies Inc." UpgradeCode="FDD9984D-7B5E-4D2D-B6CC-439EF418ABA9">
         <Package Description="Test file in a Product" Comments="Simple test" InstallerVersion="200" Compressed="yes" />
         <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
         <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
@@ -70,6 +70,12 @@
                     <Component Id="Register_Schedule_Reverse.Installer.bat" Guid="A874F7AB-192C-49D5-A81D-2E7EEF6C6E68" DiskId="1">
                         <File Id="Register_Schedule_Reverse.Installer.bat" Name="Register_Schedule_Reverse.Installer.bat" Source="pub1\Util\Register_Schedule_Reverse.Installer.bat" />
                     </Component>
+                    <Component Id="get.DateTimeSuffix.Task.cmd" Guid="BCE888EF-361D-4F41-A6CC-3CAB61458C10" DiskId="1">
+                        <File Id="get.DateTimeSuffix.Task.cmd" Name="get.DateTimeSuffix.Task.cmd" Source="pub1\Util\get.DateTimeSuffix.Task.cmd" />
+                    </Component>
+                    <Component Id="get.DomainDNSSuffix.Task.cmd" Guid="C3C6036F-DFFC-4376-B07D-C0707C57286A" DiskId="1">
+                        <File Id="get.DomainDNSSuffix.Task.cmd" Source="pub1\Util\get.DomainDNSSuffix.Task.cmd" Name="get.DomainDNSSuffix.Task.cmd" />
+                    </Component>
                 </Directory>
             </Directory>
         </Directory>
@@ -99,6 +105,8 @@
             <ComponentRef Id="TASK_WRITE.XM_" />
             <ComponentRef Id="NIT.CredReplacer.exe" />
             <ComponentRef Id="Register_Schedule_Reverse.Installer.bat" />
+            <ComponentRef Id="get.DateTimeSuffix.Task.cmd" />
+            <ComponentRef Id="get.DomainDNSSuffix.Task.cmd" />
         </Feature>
         <UI />
         <InstallExecuteSequence>

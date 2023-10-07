@@ -42,7 +42,7 @@ text_lines = []
 # Derivative Variables
 settings_fname = "c:\\pub1\\Util" + "\\" + settings_file
 try:
-	currenthost = os.environ['userdomain']
+	currenthost = socket.gethostname()
 except:
 	pass
 
